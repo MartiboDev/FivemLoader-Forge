@@ -1,7 +1,6 @@
-import Button from "react-bootstrap/Button"
+import { Link } from "react-router-dom"
 import styles from "./NavigationBar.module.scss"
 
-import Link from "next/link"
 import { useState } from "react"
 
 export interface NavigationItem {
@@ -17,11 +16,11 @@ export default function NavigationBar() {
 			link: "/home",
 			selected: true,
 		},
-		// {
-		// 	name: "Settings",
-		// 	link: "/settings",
-		// 	selected: false,
-		// },
+		{
+			name: "Settings",
+			link: "/settings",
+			selected: false,
+		},
 	])
 
 	function selectItem(index: number) {
@@ -36,13 +35,13 @@ export default function NavigationBar() {
 	return (
 		<div className={styles.navigation_bar}>
 			{navigationItems.map((item, index) => (
-				<Link key={index} href={item.link}>
-					<span
-						className={item.selected ? styles.selected : undefined}
-						onClick={() => selectItem(index)}
-					>
-						{item.name}
-					</span>
+				<Link
+					key={index}
+					to={item.link}
+					className={item.selected ? styles.selected : undefined}
+					onClick={() => selectItem(index)}
+				>
+					{item.name}
 				</Link>
 			))}
 		</div>

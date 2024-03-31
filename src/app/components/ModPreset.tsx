@@ -6,8 +6,8 @@ export default function ModPreset({ title, value }) {
 	const { appData, setAppData } = useContext(AppContext)
 
 	function changePreset(preset: string) {
-		window.ipc.changePreset(preset)
-		setAppData({ ...appData, preset })
+		// window.ipc.changePreset(preset)
+		// setAppData({ ...appData, preset })
 	}
 
 	return (

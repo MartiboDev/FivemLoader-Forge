@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import { useContext } from "react"
 import { Button, Form } from "react-bootstrap"
 import { AppContext } from "../context"
 
@@ -8,11 +8,11 @@ export default function FolderSelector({ title, placeholder, pathKey }) {
 	const { appData, setAppData } = useContext(AppContext)
 
 	const selectFolder = () => {
-		window.ipc.selectFolder(pathKey).then((folderPath) => {
-			if (folderPath) {
-				setAppData({ ...appData, [pathKey]: folderPath })
-			}
-		})
+		// window.ipc.selectFolder(pathKey).then((folderPath) => {
+		// 	if (folderPath) {
+		// 		setAppData({ ...appData, [pathKey]: folderPath })
+		// 	}
+		// })
 	}
 
 	return (

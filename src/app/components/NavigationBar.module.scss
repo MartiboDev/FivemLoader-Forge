@@ -7,10 +7,12 @@
 	background-color: #1c1c1c;
 	border-bottom: 1px solid var(--border-color);
 
-	span {
+	gap: 0.5em;
+
+	a {
 		cursor: pointer;
-		padding-right: 0.5em;
 		color: #848484;
+		text-decoration: none;
 
 		&:hover:not(.selected) {
 			color: #c6c6c6;

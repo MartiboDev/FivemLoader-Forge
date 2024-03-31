@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { AppContext } from "../context"
 import FolderSelector from "../components/FolderSelector"
 
-import styles from "./Settings.module.scss"
+import styles from "./settings.module.scss"
 
 export default function SettingsPage() {
 	const { appData, setAppData } = useContext(AppContext)
