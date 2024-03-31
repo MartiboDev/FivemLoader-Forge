@@ -8,14 +8,14 @@ export default function HomePage() {
 	const { appData, setAppData } = useContext(AppContext)
 
 	useEffect(() => {
-		// window.ipc.getFivemConfig().then((config) => {
-		// 	setAppData({
-		// 		...appData,
-		// 		fivemPath: config.fivemPath,
-		// 		preset: config.preset,
-		// 	})
-		// 	console.log(config)
-		// })
+		window.ipc.getFivemConfig().then((config) => {
+			setAppData({
+				...appData,
+				fivemPath: config.fivemPath,
+				preset: config.preset,
+			})
+			console.log(config)
+		})
 	}, [])
 
 	return (
