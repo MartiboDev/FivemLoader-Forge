@@ -1,0 +1,15 @@
+.folder_selector {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25em;
+
+	.controls {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+
+		button {
+			width: 160px;
+		}
+	}
+}

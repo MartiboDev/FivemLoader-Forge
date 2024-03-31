@@ -1,0 +1,35 @@
+.mod_preset {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #3c3c3c;
+
+	width: 200px;
+	height: 200px;
+
+	cursor: pointer;
+
+	overflow: hidden;
+
+	&.selected {
+		background: linear-gradient(
+			180deg,
+			rgba(0, 128, 128, 0.6250875350140056) 0%,
+			rgba(0, 68, 68, 0.35057773109243695) 69%,
+			rgba(30, 30, 30, 0.2) 100%
+		);
+	}
+
+	&:hover:not(.selected) {
+		background: rgb(0, 128, 128, 0.4);
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+
+		padding: 0.5em;
+	}
+}
