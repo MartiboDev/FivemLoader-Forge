@@ -13,7 +13,7 @@ export default function NavigationBar() {
 	const [navigationItems, setNavigationItems] = useState<NavigationItem[]>([
 		{
 			name: "Home",
-			link: "/home",
+			link: "/",
 			selected: true,
 		},
 		{
