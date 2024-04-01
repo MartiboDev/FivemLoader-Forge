@@ -1,15 +1,10 @@
-import {
-	BrowserRouter as Router,
-	Route,
-	Routes,
-	Navigate,
-} from "react-router-dom"
+import { HashRouter as Router, Route, Routes, Navigate } from "react-router-dom"
 import Layout from "./components/Layout"
 import AppProvider from "./provider/AppProvider"
 import HomePage from "./pages/Home"
 import SettingsPage from "./pages/Settings"
 
-export default function app() {
+export default function App() {
 	return (
 		<AppProvider>
 			<Router>

@@ -42,7 +42,8 @@ export class FivemManager {
 	setup(fivemPath?: string) {
 		this.createConfig(fivemPath)
 		this.createDefaultFiles()
-		this.loadPreset(this.config.preset)
+		// WARNING: do not load preset as it will wipe the users mods/plugins on launch
+		// this.loadPreset(this.config.preset)
 	}
 
 	private createConfig(fivemPath: string) {

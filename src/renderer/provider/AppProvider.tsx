@@ -12,10 +12,6 @@ export default function AppProvider({ children }) {
 		preset: "",
 	})
 
-	useEffect(() => {
-		console.log(appData)
-	}, [appData])
-
 	return (
 		<AppContext.Provider value={{ appData, setAppData }}>
 			{children}

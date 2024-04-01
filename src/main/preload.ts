@@ -1,5 +1,7 @@
 import { contextBridge, ipcRenderer, IpcRendererEvent } from "electron"
 
+export type IpcHandler = typeof handler
+
 const handler = {
 	send(channel: string, value: unknown) {
 		ipcRenderer.send(channel, value)
@@ -13,7 +15,6 @@ const handler = {
 			ipcRenderer.removeListener(channel, subscription)
 		}
 	},
-	// create a new function that will let me choose a folder
 	selectFolder(pathKey) {
 		return ipcRenderer.invoke("select-folder", pathKey)
 	},
@@ -27,5 +28,3 @@ const handler = {
 }
 
 contextBridge.exposeInMainWorld("ipc", handler)
-
-export type IpcHandler = typeof handler
